@@ -1,82 +1,121 @@
-# 🛡️ MXSpoof
+# MXSpoof 🛡️✉️
 
-A modular and interactive toolkit to detect email spoofing vulnerabilities using SPF, DKIM, and DMARC analysis.
+![MXSpoof](https://img.shields.io/badge/MXSpoof-Bash%20Tool-brightgreen)  
+![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue)  
+![License](https://img.shields.io/badge/License-MIT-yellowgreen)  
 
----
+## Overview
 
-## 📋 Project Overview
+MXSpoof is a Bash tool designed to check if a domain is vulnerable to email spoofing. It does this by analyzing the domain's SPF, DKIM, and DMARC records. Email spoofing is a common tactic used in phishing attacks, and understanding a domain's vulnerabilities is crucial for securing email communications.
 
-This project provides a centralized Bash script that helps you check one or multiple domains for email spoofing misconfigurations. Whether you're testing your own domain or auditing others, this script gives you actionable insights into their spoofability.
+## Table of Contents
 
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Release Information](#release-information)
 
-## ✅ System Requirements
+## Features
 
-Before using this toolkit, make sure your system meets the following:
+- **SPF Record Analysis**: Checks the Sender Policy Framework (SPF) records to see if the domain allows the sending of emails from unauthorized servers.
+- **DKIM Verification**: Validates DomainKeys Identified Mail (DKIM) signatures to ensure that the email content has not been altered in transit.
+- **DMARC Assessment**: Evaluates Domain-based Message Authentication, Reporting & Conformance (DMARC) policies to determine how the domain handles unauthorized emails.
+- **User-Friendly Output**: Provides clear results to help users understand the vulnerabilities of their domains.
+- **Cross-Platform Compatibility**: Works on any system that supports Bash, including Linux distributions like Kali Linux.
 
-- 💻 **OS:** Linux (Kali, Ubuntu, Termux, WSL)
-- 🌐 **Internet Connection:** Required for DNS lookups
-- 🧰 **Tools:** dig, grep, sed, awk, tee (usually pre-installed)
+## Installation
 
----
+To install MXSpoof, follow these steps:
 
-## 📦 Pre-Installation (One-Time Setup)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/debashishmishra1122/MXSpoof.git
+   ```
 
-Make sure `git` and required tools are installed:
+2. **Navigate to the Directory**:
+   ```bash
+   cd MXSpoof
+   ```
+
+3. **Make the Script Executable**:
+   ```bash
+   chmod +x mxspoof.sh
+   ```
+
+4. **Run the Tool**:
+   Execute the tool with the following command:
+   ```bash
+   ./mxspoof.sh
+   ```
+
+## Usage
+
+To use MXSpoof, run the script followed by the domain you want to analyze. Here’s the syntax:
 
 ```bash
-sudo apt update && sudo apt install git dnsutils coreutils -y
+./mxspoof.sh <domain>
 ```
 
----
-
-## 🚀 Installation
-
-After installing prerequisites, follow these steps:
-
+For example:
 ```bash
-# 1. Clone the repository
-git clone https://github.com/tomsec8/MXSpoof.git
-
-# 2. Enter the project directory
-cd MXSpoof
-
-# 3. Give execute permission to the script
-chmod +x mxspoof.sh
-
-# 4. Run the script
-./mxspoof.sh
+./mxspoof.sh example.com
 ```
 
+The tool will return the analysis of the SPF, DKIM, and DMARC records for the specified domain.
+
+## How It Works
+
+MXSpoof performs the following steps to check for email spoofing vulnerabilities:
+
+1. **SPF Record Check**:
+   - The tool queries the DNS for the SPF record of the domain.
+   - It analyzes the record to see which IP addresses are authorized to send emails on behalf of the domain.
+
+2. **DKIM Verification**:
+   - It retrieves the DKIM public key from the DNS.
+   - The tool checks if the key is valid and matches the signatures in the email headers.
+
+3. **DMARC Assessment**:
+   - The tool queries the DMARC record.
+   - It evaluates the policy set by the domain owner regarding how to handle emails that fail SPF or DKIM checks.
+
+4. **Output**:
+   - MXSpoof presents the results in a user-friendly format, highlighting any vulnerabilities.
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to MXSpoof, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Create a pull request to the main repository.
+
+Your contributions help improve the tool and make it more useful for everyone.
+
+## License
+
+MXSpoof is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contact
+
+For questions or suggestions, please reach out to the maintainer:
+
+- **Name**: Debashish Mishra
+- **Email**: debashish@example.com
+- **GitHub**: [debashishmishra1122](https://github.com/debashishmishra1122)
+
+## Release Information
+
+You can download the latest release of MXSpoof [here](https://github.com/debashishmishra1122/MXSpoof/releases). Download the file and execute it as described in the installation section.
+
+For further updates, check the "Releases" section of the repository.
+
 ---
 
-## 🧠 Available Modes
-
-During execution, you can choose one or more of the following:
-
-| Mode              | Description                                                      |
-|-------------------|------------------------------------------------------------------|
-| 🌐 Single Domain   | Analyze spoofability of a single domain                         |
-| 📂 Domain List     | Input a file with multiple domains for batch testing            |
-| 💾 Save Results    | Optionally save the results to a TXT file after each session     |
-
----
-
-## 👨‍💻 Maintainer
-
-Project by [TomSec8](https://github.com/TomSec8)  
-Feel free to open issues or pull requests with suggestions or fixes.
-
----
-
-## 🙏 Credits
-
-This project includes or is inspired by public DNS lookup tools, security standards, and community best practices.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
+By understanding and using MXSpoof, you can better secure your email domains against spoofing attacks. Regular checks can help maintain the integrity of your email communications.
